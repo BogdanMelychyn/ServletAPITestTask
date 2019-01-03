@@ -19,7 +19,7 @@ is blank or missing ignore it.
 That metadata contain following: fileName, fileSize (in KB), fileCreationDate. If
 parameter is blank or missing set it as a ‘false’ value.
 
-######Example of API call/response:
+###### Example of API call/response:
 
 > `/ServletAPITestTask/readLines?q=Java&length=160&limit=1000&metaData=true`
 

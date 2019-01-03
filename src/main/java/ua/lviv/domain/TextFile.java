@@ -5,16 +5,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.text.SimpleDateFormat;
 
 public class TextFile {
 	private File file;
 
 	public TextFile() {
-		this.file = new File(System.getProperty("user.dir")+"\\webapps\\ServletAPITestTask\\test.txt");
+		
 	}
 
-	public TextFile(String str)throws NullPointerException {
-		this.file = new File(str);
+	public TextFile(String path) {
+		this.file = new File(path);
 	}
 
 	public File getFile() {
@@ -26,9 +27,10 @@ public class TextFile {
 	}
 
 	public String getDateCreation() throws IOException {
-
 		BasicFileAttributes attr = Files.readAttributes(Paths.get(file.toURI()), BasicFileAttributes.class);
-		return attr.creationTime().toString();
+		SimpleDateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm a");
+
+		return df.format(attr.creationTime().toMillis());
 
 	}
 
@@ -37,7 +39,7 @@ public class TextFile {
 	}
 
 	public String getSize() {
-		return String.valueOf(Math.round((double) file.length() / 1024)) + "KB";
+		return String.valueOf(Math.round((double) file.length() / 1024)) + " KB";
 	}
 
 }
