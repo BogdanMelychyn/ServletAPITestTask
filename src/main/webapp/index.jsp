@@ -11,37 +11,33 @@
 
 </head>
 <body>
-<div style="padding: 30px;" class ="text-table">
-	<h2>Hello!</h2>
-	
+	<div style="padding: 30px;" class="text-table">
+		<h2>Hello!</h2>
+
 	</div>
-	
-	<div style="padding: 30px;" class ="text-table">
+
+	<div style="padding: 30px;" class="text-table">
 		<h2>Get Json Object</h2>
 		<form role="form" style="width: 300px" action="readLines" method="GET">
 			<div class="form-group">
-				<label for="email"> Text to search in file:</label> <input type="text" name="q"
-					class="form-control" id="q">
-			</div>
-			
-			<div class="form-group">
-				<label for="email">Max number of chars:</label> <input type="text" name="limit"
-					class="form-control" id="date2">
+				<label for="q"> Text to search in file:</label> 
+				<input type="text" name="q" class="form-control" id="q">
 			</div>
 			<div class="form-group">
-				<label for="email">Max string length:</label> <input type="text" name="length"
-					class="form-control" id="date2">
+				<label for="limit">Max number of chars:</label> 
+				<input type="text" name="limit" class="form-control" id="limit">
 			</div>
 			<div class="form-group">
-				<label for="email">Show meta data of File:</label> <input type="text" name="metaData"
-					class="form-control" id="date2">
+				<label for="length">Max string length:</label> 
+				<input type="text" name="length" class="form-control" id="length">
 			</div>
+			<div class="form-group form-check">
+   				<input type="checkbox" name="metaData" class="form-check-input" id="metaData" value="true">
+    			<label class="form-check-label" for="metaData">Show meta data</label>
+  			</div>
 			<button type="submit" class="btn btn-secondary btn-lg">Send</button>
 		</form>
 	</div>
-	
-	
-	
-	
-	</body>
+
+</body>
 </html>

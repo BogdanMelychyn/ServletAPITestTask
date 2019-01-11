@@ -62,7 +62,6 @@ public class ReadFilter {
 			}
 			line = bReader.readLine();
 		}
-		
 		jsonObj.put("text", jsonArraj);
 		bReader.close();
 		return jsonObj;

@@ -29,7 +29,6 @@ public class TextFile {
 	public String getDateCreation() throws IOException {
 		BasicFileAttributes attr = Files.readAttributes(Paths.get(file.toURI()), BasicFileAttributes.class);
 		SimpleDateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm a");
-
 		return df.format(attr.creationTime().toMillis());
 
 	}
