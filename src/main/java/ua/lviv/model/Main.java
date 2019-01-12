@@ -1,4 +1,4 @@
-package ua.lviv.domain;
+package ua.lviv.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,11 +6,10 @@ import java.io.RandomAccessFile;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
-		
-	}
 
+	}
 	static void fillFile(File file) throws IOException {
 		RandomAccessFile raf = new RandomAccessFile(file, "rw");
 		char[] c = new char[30];
@@ -26,4 +25,5 @@ public class Main {
 		}
 		raf.close();
 	}
+
 }
