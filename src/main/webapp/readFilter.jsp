@@ -13,7 +13,7 @@
 	</div>
 
 	<div style="padding: 30px;" class="text-table">
-		<h2>Get Json Object</h2>
+		<h3>Read text from ${msg} to Json Object</h3>
 		<form role="form" style="width: 300px" action="readLines" method="GET">
 			<div class="form-group">
 				<label for="q"> Text to search in file:</label> 
@@ -29,7 +29,7 @@
 			</div>
 			<div class="form-group form-check">
    				<input type="checkbox" name="metaData" class="form-check-input" id="metaData" value="true">
-    			<label class="form-check-label" for="metaData">Show meta data</label>
+    			<label class="form-check-label" for="metaData">Show metadata of file</label>
   			</div>
 			<button type="submit" class="btn btn-secondary btn-lg">Send</button>
 		</form>

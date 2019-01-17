@@ -6,10 +6,10 @@ import java.io.RandomAccessFile;
 
 public class Main {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws IOException {
 
 	}
+
 	static void fillFile(File file) throws IOException {
 		RandomAccessFile raf = new RandomAccessFile(file, "rw");
 		char[] c = new char[30];

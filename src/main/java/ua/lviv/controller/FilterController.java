@@ -59,18 +59,15 @@ public class FilterController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String p = req.getParameter("f");
 		String path = config.getServletContext().getRealPath("/" + p);
-
 		File f = new File(path);
-		System.out.println("#INF: " + f.getAbsolutePath());
-		if (!f.isFile()) {
-
+			if (!f.isFile()) {
 			req.setAttribute("msg", "File not found");
 			req.getRequestDispatcher("index.jsp").forward(req, resp);
-			System.out.println("#INF: "+"File not found " + path);
 			return;
 
 		}
 		filter.setFile(f);
+		req.setAttribute("msg", f.getName());
 		req.getRequestDispatcher("readFilter.jsp").forward(req, resp);
 	}
 
